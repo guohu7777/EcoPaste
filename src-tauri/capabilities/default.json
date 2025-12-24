@@ -17,6 +17,11 @@
       "allow": ["**/*"],
       "identifier": "fs:scope"
     },
+    {
+      "allow": [{ "url": "http://**:*/**" }, { "url": "https://**:*/**" }],
+      "deny": [{ "url": "https://private.tauri.app" }],
+      "identifier": "http:default"
+    },
     "autostart:default",
     "log:default",
     "sql:default",
@@ -43,7 +48,8 @@
     "clipboard-x:default",
     "eco-window:default",
     "eco-paste:default",
-    "eco-autostart:default"
+    "eco-autostart:default",
+    "http:default"
   ],
   "windows": ["*"]
 }

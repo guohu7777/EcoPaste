@@ -33,6 +33,8 @@ pub fn run() {
         ))
         // 数据库：https://github.com/tauri-apps/tauri-plugin-sql/tree/v2
         .plugin(tauri_plugin_sql::Builder::default().build())
+        // http 插件 https://github.com/tauri-apps/tauri-plugin-http
+        .plugin(tauri_plugin_http::init())
         // 日志插件：https://github.com/tauri-apps/tauri-plugin-log/tree/v2
         .plugin(
             tauri_plugin_log::Builder::new()
